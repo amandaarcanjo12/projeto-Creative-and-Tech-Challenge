@@ -1,0 +1,204 @@
+ :root {
+            --bg-principal: #0b1320; 
+            --bg-card: #111c2e;      
+            --verde-neon: #10b981;    
+            --verde-escuro: #064e3b;  
+            --texto-branco: #ffffff;
+            --texto-cinza: #9ca3af;
+            --borda: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-branco);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--borda);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--verde-neon);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--texto-cinza);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--verde-neon);
+        }
+
+        .btn-entrar {
+            border: 1px solid var(--verde-neon);
+            color: var(--verde-neon);
+            padding: 8px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            background: transparent;
+            transition: all 0.3s;
+        }
+
+        .btn-entrar:hover {
+            background-color: var(--verde-neon);
+            color: var(--bg-principal);
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            padding: 40px;
+            gap: 40px;
+        }
+
+        .sidebar {
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .sidebar-btn {
+            background: transparent;
+            border: none;
+            color: var(--texto-cinza);
+            text-align: left;
+            padding: 12px 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .sidebar-btn.active, .sidebar-btn:hover {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--verde-neon);
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .titulo-secao h1 span {
+            color: var(--verde-neon);
+        }
+
+        .titulo-secao p {
+            color: var(--texto-cinza);
+            margin-top: 5px;
+        }
+
+        .secao-sobre {
+            background-color: var(--bg-card);
+            border: 1px solid var(--borda);
+            border-radius: 12px;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        .secao-sobre h2 {
+            color: var(--verde-neon);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .secao-sobre p {
+            color: var(--texto-cinza);
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .grid-pilares {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .card-pilar {
+            background-color: var(--bg-principal);
+            border: 1px solid var(--borda);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .card-pilar .icone {
+            font-size: 28px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-pilar h4 {
+            margin-bottom: 8px;
+            color: var(--texto-branco);
+        }
+
+        .card-pilar p {
+            font-size: 13px;
+            color: var(--texto-cinza);
+            margin-bottom: 0;
+        }
+
+        .painel-aviso {
+            background-color: rgba(6, 78, 59, 0.1);
+            border: 1px solid var(--verde-escuro);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .painel-aviso h3 {
+            color: var(--verde-neon);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .painel-aviso p {
+            font-size: 14px;
+            color: var(--texto-cinza);
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--texto-cinza);
+            font-size: 14px;
+            border-top: 1px solid var(--borda);
+            margin-top: auto;
+        }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas - AntiGolpes</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/estatisticas.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><i class="fa-solid fa-shield-halved"></i> Anti<span>Golpes</span></div>
+        <ul class="nav-links">
+            <li><a href="../html/index.html">Início</a></li>
+            <li><a href="../html/detectargolpe.html">Detectar Golpe</a></li>
+            <li><a href="../html/dicas.html">Dicas</a></li>
+            <li><a href="../html/estatisticas.html" class="active">Estatísticas</a></li>
+            <li><a href="../html/sobre.html">Sobre</a></li>
+        </ul>
+        <button class="btn-entrar">Entrar</button>
+    </nav>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <button class="sidebar-btn" onclick="window.location.href='../html/index.html'"><i
+                    class="fa-solid fa-house"></i> Início</button>
+            <button class="sidebar-btn" onclick="window.location.href='../html/detectargolpe.html'"><i
+                    class="fa-solid fa-magnifying-glass"></i> Detectar Golpe</button>
+            <button class="sidebar-btn" onclick="window.location.href='../html/dicas.html'"><i
+                    class="fa-solid fa-shield-halved"></i> Dicas de Segurança</button>
+            <button class="sidebar-btn" onclick="window.location.href='../html/denunciar.html'"><i
+                    class="fa-solid fa-triangle-exclamation"></i> Denunciar Golpes</button>
+            <button class="sidebar-btn active"><i class="fa-solid fa-chart-simple"></i> Estatísticas</button>
+        </aside>
+
+        <main class="main-content">
+
+            <div class="titulo-secao">
+                <h1>Painel de <span>Dados e Transparência</span></h1>
+                <p>Acompanhe em tempo real o mapa de ameaças e o impacto das denúncias na comunidade.</p>
+            </div>
+
+            <div class="grid-resumos">
+                <div class="card-resumo">
+                    <span>Golpes analisados hoje</span>
+                    <h2 class="destaque-verde">1.248</h2>
+                </div>
+                <div class="card-resumo">
+                    <span>Padrões identificados</span>
+                    <h2 class="destaque-vermelho">842</h2>
+                </div>
+                <div class="card-resumo">
+                    <span>Pessoas protegidas</span>
+                    <h2 class="destaque-verde">5.732</h2>
+                </div>
+                <div class="card-resumo">
+                    <span>Total de relatos (Mês)</span>
+                    <h2>14.920</h2>
+                </div>
+            </div>
+
+            <div class="grid-graficos">
+
+                <div class="card-grafico">
+                    <h3>Tendência de Tentativas de Golpes (Últimos 7 dias)</h3>
+                    <div class="container-canvas">
+                        <canvas id="graficoLinha"></canvas>
+                    </div>
+                </div>
+
+                <div class="card-grafico">
+                    <h3>Tipos de Fraudes Mais Comuns</h3>
+                    <div class="container-canvas">
+                        <canvas id="graficoPizza"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2026 AntiGolpes. Todos os direitos reservados.
+    </footer>
+
+    <script src="../js/estatisticas.js"></script>
+</body>
+
+</html>

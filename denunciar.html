@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denunciar Golpe - AntiGolpes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/denunciar.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><i class="fa-solid fa-shield-halved"></i> Anti<span>Golpes</span></div>
+        <nav>
+            <ul>
+                <li><a href="../html/index.html">Início</a></li>
+                <li><a href="../html/dicas.html">Dicas</a></li>
+                <li><a href="../html/estatisticas.html">Estatísticas</a></li>
+                <li><a href="../html/sobre.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+        <div class="nav-buttons">
+            <a href="../html/index.html" class="btn-header">Voltar ao Início</a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="form-box">
+
+            <div id="form-content">
+                <div class="form-header">
+                    <h1>Registrar Novo <span>Relato</span></h1>
+                    <p>Contribua com a segurança coletiva. Seus dados pessoais não são coletados e o envio é totalmente
+                        anônimo.</p>
+                </div>
+
+                <form id="meuFormulario" onsubmit="enviarDenuncia(event)">
+
+                    <div class="form-group">
+                        <label for="tipo-fraude">Tipo de abordagem suspeita</label>
+                        <select id="tipo-fraude" required>
+                            <option value="" disabled selected>Selecione uma opção...</option>
+                            <option value="whatsapp">Falso Perfil / WhatsApp</option>
+                            <option value="ecommerce">Site de Compras Falso</option>
+                            <option value="banco">Falsa Central de Banco</option>
+                            <option value="pix">Fraude envolvendo Pix / Boleto</option>
+                            <option value="outros">Outros tipos de abordagens</option>
+                        </select>
+                    </div>
+
+                    <div class="grid-inputs">
+                        <div class="form-group">
+                            <label for="canal">Por onde recebeu? <span>(Canal)</span></label>
+                            <select id="canal" required>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="ligacao">Ligação Telefônica</option>
+                                <option value="instagram">Instagram / Rede Social</option>
+                                <option value="email">E-mail</option>
+                                <option value="sms">SMS</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="identificador">Dado do fraudador <span>(Se houver)</span></label>
+                            <input type="text" id="identificador" placeholder="Ex: Telefone, Chave Pix ou Link">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricao">Descrição dos detalhes</label>
+                        <textarea id="descricao" required
+                            placeholder="Descreva brevemente como foi a abordagem, o que disseram ou quais instruções deram. Não insira dados pessoais seus aqui."></textarea>
+                    </div>
+
+                    <div class="privacy-note">
+                        <span>🛡️</span>
+                        <p>Ao enviar, as informações fornecidas alimentam nosso buscador em tempo real para alertar
+                            outros usuários que pesquisarem pelos mesmos dados de contato ou links informados.</p>
+                    </div>
+
+                    <button type="submit" class="btn-enviar-relato">Enviar Relato Anonimamente</button>
+                </form>
+            </div>
+
+            <div id="success-message" class="success-overlay">
+                <div>✅</div>
+                <h2 style="margin-bottom: 10px;">Obrigado pela contribuição!</h2>
+                <p style="color: var(--texto-cinza); font-size: 15px; max-width: 500px; margin: 0 auto 30px auto;">
+                    Seu relato foi processado e adicionado ao nosso banco de dados. Ele ajudará a proteger outras
+                    pessoas contra esse tipo de abordagem.
+                </p>
+                <a href="../html/index.html" class="btn-header" style="display: inline-block;">Ir para a Página
+                    Inicial</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div>&copy; 2026 AntiGolpes. Todos os direitos reservados.</div>
+    </footer>
+
+    <script src="../js/denunciar.js"></script>
+</body>
+
+</html>

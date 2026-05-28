@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiGolpes - Juntos contra fraudes, sempre.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><i class="fa-solid fa-shield-halved"></i> Anti<span>Golpes</span></div>
+        <nav>
+            <ul>
+                <li><a href="../html/index.html" class="active">Início</a></li>
+                <li><a href="../html/dicas.html">Dicas</a></li>
+                <li><a href="../html/detectargolpe.html">Detectar Golpe</a></li>
+                <li><a href="../html/estatisticas.html">Estatísticas</a></li>
+                <li><a href="../html/sobre.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+        <div class="nav-buttons">
+            <a href="#" class="btn-text">Entrar</a>
+            <a href="../html/denunciar.html" class="btn-header">Denunciar Golpe</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-info">
+            <span class="badge"><i class="fa-solid fa-shield-alt"></i> Proteção Digital Comunitária</span>
+            <h1>A sua linha de defesa contra <span>fraudes e golpes</span>.</h1>
+            <p>Monitore ameaças, verifique mensagens suspeitas em tempo real e colabore com relatos para proteger
+                milhares de cidadãos.</p>
+            <div class="hero-actions">
+                <a href="../html/dicas.html" class="btn-principal">Explorar Dicas</a>
+                <a href="../html/estatisticas.html" class="btn-secundario">Ver Painel de Dados</a>
+            </div>
+        </div>
+
+        <div class="detector-box">
+            <h3><i class="fa-solid fa-magnifying-glass"></i> Analisador de Ameaças</h3>
+            <p style="color: var(--texto-cinza); font-size: 14px; margin-bottom: 15px;">Cole links, chaves Pix ou textos
+                duvidosos abaixo:</p>
+            <textarea id="text-input"
+                placeholder="Ex: Parabéns! Você ganhou um sorteio de R$ 5.000. Clique no link para resgatar..."></textarea>
+
+            <div class="result-panel" id="result-display">
+                Aguardando inserção de dados para iniciar varredura de padrões...
+            </div>
+
+            <button class="btn-detector" onclick="executarAnalise()">Verificar Conteúdo</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="section-title">
+            <h2>Como combatemos o crime</h2>
+            <p>Unimos tecnologia de análise e inteligência coletiva para neutralizar fraudes antes que façam novas
+                vítimas.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h3>Verificação Inteligente</h3>
+                <p>Nossa inteligência analisa termos urgentes, links maliciosos e dados suspeitos de forma automatizada
+                    e instantânea.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+                <h3>Relatos Anônimos</h3>
+                <p>Espaço seguro para registrar tentativas de golpes ou assaltos, gerando alertas que protegem toda a
+                    vizinhança digital.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-chart-bar"></i></div>
+                <h3>Mapeamento Real</h3>
+                <p>Estatísticas integradas que mostram quais tipos de fraudes estão crescendo na sua região a cada
+                    semana.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>&copy; 2026 AntiGolpes. Todos os direitos reservados.</div>
+        <ul>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="../html/sobre.html">Contato</a></li>
+        </ul>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+:root {
+            --bg-principal: #0b1320; 
+            --bg-card: #111c2e;      
+            --verde-neon: #10b981;    
+            --verde-escuro: #064e3b;  
+            --texto-branco: #ffffff;
+            --texto-cinza: #9ca3af;
+            --borda: #1e293b;
+            --vermelho-alerta: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-branco);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- NAVBAR SUPERIOR --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--borda);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--verde-neon);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--texto-cinza);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--verde-neon);
+        }
+
+        .btn-entrar {
+            border: 1px solid var(--verde-neon);
+            color: var(--verde-neon);
+            padding: 8px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            background: transparent;
+            transition: all 0.3s;
+        }
+
+        .btn-entrar:hover {
+            background-color: var(--verde-neon);
+            color: var(--bg-principal);
+        }
+
+        /* --- CORPO PRINCIPAL --- */
+        .container {
+            display: flex;
+            flex: 1;
+            padding: 40px;
+            gap: 40px;
+        }
+
+        /* Menu Lateral */
+        .sidebar {
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .sidebar-btn {
+            background: transparent;
+            border: none;
+            color: var(--texto-cinza);
+            text-align: left;
+            padding: 12px 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .sidebar-btn.active, .sidebar-btn:hover {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--verde-neon);
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .titulo-secao h1 span {
+            color: var(--verde-neon);
+        }
+
+        .titulo-secao p {
+            color: var(--texto-cinza);
+            margin-top: 5px;
+        }
+
+        /* --- GRID DE CATEGORIAS --- */
+        .grid-dicas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card-dica-conteudo {
+            background-color: var(--bg-card);
+            border: 1px solid var(--borda);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s;
+        }
+
+        .card-dica-conteudo:hover {
+            transform: translateY(-5px);
+        }
+
+        .icone-categoria {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .card-dica-conteudo h3 {
+            margin-bottom: 15px;
+            color: var(--texto-branco);
+        }
+
+        .lista-sinais {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .lista-sinais li {
+            font-size: 14px;
+            color: var(--texto-cinza);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .lista-sinais li::before {
+            content: "⚠️";
+            font-size: 12px;
+        }
+
+        /* --- REGRAS DE OURO --- */
+        .regras-ouro {
+            background-color: rgba(6, 78, 59, 0.15);
+            border: 1px solid var(--verde-escuro);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .regras-ouro h2 {
+            color: var(--verde-neon);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checklist-regras {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .item-regra {
+            background: rgba(11, 19, 32, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--verde-neon);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .item-regra strong {
+            color: var(--texto-branco);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .item-regra span {
+            color: var(--texto-cinza);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--texto-cinza);
+            font-size: 14px;
+            border-top: 1px solid var(--borda);
+            margin-top: auto;
+        }

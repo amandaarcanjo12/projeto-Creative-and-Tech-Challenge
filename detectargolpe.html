@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiGolpes - Juntos contra golpes, sempre.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/detectargolpe.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><i class="fa-solid fa-shield-halved"></i> Anti<span>Golpes</span></div>
+        <ul class="nav-links">
+            <li><a href="../html/index.html">Início</a></li>
+            <li><a href="../html/detectargolpe.html" class="active">Detectar Golpe</a></li>
+            <li><a href="../html/dicas.html">Dicas</a></li>
+            <li><a href="../html/estatisticas.html">Estatísticas</a></li>
+            <li><a href="../html/sobre.html">Sobre</a></li>
+        </ul>
+        <button class="btn-entrar">Entrar</button>
+    </nav>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <button class="sidebar-btn" onclick="window.location.href='../html/index.html'"><i
+                    class="fa-solid fa-house"></i> Início</button>
+            <button class="sidebar-btn" onclick="window.location.href='../html/detectargolpe.html'"><i
+                    class="fa-solid fa-magnifying-glass"></i> Detectar Golpe</button>
+            <button class="sidebar-btn" onclick="window.location.href='../html/dicas.html'"><i
+                    class="fa-solid fa-shield-halved"></i> Dicas de Segurança</button>
+            <button class="sidebar-btn" onclick="window.location.href='../html/denunciar.html'"><i
+                    class="fa-solid fa-triangle-exclamation"></i> Denunciar Golpes</button>
+            <button class="sidebar-btn" onclick="window.location.href='../html/estatisticas.html'"><i
+                    class="fa-solid fa-chart-simple"></i> Estatísticas</button>
+
+            <div class="card-dica">
+                <h4><i class="fa-solid fa-lightbulb"></i> Dica do dia</h4>
+                <p>Desconfie de ofertas muito boas e sempre confirme informações por canais oficiais.</p>
+            </div>
+        </aside>
+        <main class="main-content">
+
+            <div class="titulo-secao">
+                <h1>Desconfie. Verifique. <span>Proteja-se.</span></h1>
+                <p>Cole uma mensagem, link ou descrição suspeita e descubra se pode ser um golpe.</p>
+            </div>
+
+            <div class="detector-grid">
+                <div class="card">
+                    <h3>Verificar possível golpe</h3>
+                    <p style="color: var(--texto-cinza); font-size: 14px; margin-bottom: 10px;">
+                        Cole aqui a mensagem, número, link ou descrição que você recebeu:
+                    </p>
+                    <textarea id="input-golpe"
+                        placeholder="Ex: Olá, seu prêmio foi aprovado! Clique aqui: http://..."></textarea>
+                    <button class="btn-analisar" onclick="analisarTexto()">Analisar agora</button>
+                </div>
+
+                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3>Resultado da análise</h3>
+                    <div id="painel-resultado" class="resultado-analise">
+                        <div style="font-size: 40px; color: var(--texto-cinza);"></div>
+                        <div class="resultado-status" id="status-texto">Aguardando análise</div>
+                        <p style="color: var(--texto-cinza); font-size: 13px; margin-top: 5px;" id="detalhe-texto">
+                            Cole o conteúdo suspeito ao lado para começarmos a verificação.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2026 AntiGolpes. Todos os direitos reservados.
+    </footer>
+
+    <script src="../js/detectargolpe.js"></script>
+</body>
+
+</html>
